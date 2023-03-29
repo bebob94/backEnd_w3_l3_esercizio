@@ -14,9 +14,9 @@ public class evento_DAO {
 	
 	
 	// <<<<<<<<<<<<<<<<<<<<<<<<<< AGGIUNGI EVENTO >>>>>>>>>>>>>>>>>>>>>>>>>>
-	 public static void save(Object evento) throws SQLException {
+	 public static void save(evento e) throws SQLException {
 			em.getTransaction().begin();
-			em.persist(evento);
+			em.persist(e);
 			em.getTransaction().commit();
 			System.out.println("Evento salvato nel database");
 		}

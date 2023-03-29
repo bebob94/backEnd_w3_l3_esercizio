@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import javax.persistence.*;
 
+import controller.TipoEvento;
+
 @Entity
 @NamedQuery(name = "evento.findAll", query = "SELECT e FROM evento e")
 public class evento implements Serializable{
@@ -16,12 +18,13 @@ public class evento implements Serializable{
 	private String titolo;
 	private LocalDate date;
 	private String descrizione;
-	private String tipo_evento;
+	@Enumerated(EnumType.STRING)
+	private TipoEvento tipo_evento;
 	private Integer numero_massimo_partecipanti;
 	
 
 	// <<<<<<<<<<<<<<<<<<<<<<<<<< CREAZIONE EVENTO >>>>>>>>>>>>>>>>>>>>>>>>>>
-		 public evento(String titolo, LocalDate date, String descrizione, String tipo_evento, Integer numero_massimo_partecipanti) throws SQLException {
+		 public evento(String titolo, LocalDate date, String descrizione, TipoEvento tipo_evento, Integer numero_massimo_partecipanti){
 			setTitolo(titolo);
 			setDate(date);
 			setDescrizione(descrizione);
@@ -57,11 +60,11 @@ public class evento implements Serializable{
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
-	public String getTipo_evento() {
+	public TipoEvento getTipo_evento() {
 		return tipo_evento;
 	}
-	public void setTipo_evento(String tipo_evento) {
-		this.tipo_evento = tipo_evento;
+	public void setTipo_evento(TipoEvento tipo_evento2) {
+		this.tipo_evento = tipo_evento2;
 	}
 	public Integer getNumero_massimo_partecipanti() {
 		return numero_massimo_partecipanti;
