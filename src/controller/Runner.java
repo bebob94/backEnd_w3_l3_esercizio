@@ -32,7 +32,7 @@ public class Runner {
 //			evento_DAO.delete(e3);
 			
 			// <<<<<<<<<<<<<<<<<<<<<<<<<< MODIFICA EVENTO >>>>>>>>>>>>>>>>>>>>>>>>>>
-//			e1.setTipo_evento("PUBBLICO");
+//			e1.setTipo_evento(TipoEvento.PUBBLICO);
 //			evento_DAO.updateEvento(e1);
 			
 			// <<<<<<<<<<<<<<<<<<<<<<<<<< REFRESH EVENTO >>>>>>>>>>>>>>>>>>>>>>>>>>
