@@ -40,7 +40,7 @@ public class Runner {
 //			System.out.println(evento_DAO.leggiEventi());
 //			
 			List<evento> lista = evento_DAO.leggiEventi();
-			lista.forEach(ut -> System.out.println(ut));
+			lista.forEach(ev -> System.out.println(ev));
 			
 		} catch (SQLException e) {
 		
