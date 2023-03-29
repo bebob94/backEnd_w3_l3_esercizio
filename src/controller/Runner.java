@@ -37,6 +37,8 @@ public class Runner {
 //			evento_DAO.refresh(e);
 			
 			// <<<<<<<<<<<<<<<<<<<<<<<<<< LETTURA EVENTI >>>>>>>>>>>>>>>>>>>>>>>>>>
+//			System.out.println(evento_DAO.leggiEventi());
+//			
 			List<evento> lista = evento_DAO.leggiEventi();
 			lista.forEach(ut -> System.out.println(ut));
 			
